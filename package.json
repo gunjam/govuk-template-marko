@@ -1,0 +1,26 @@
+{
+  "name": "govuk-template-marko",
+  "description": "GOV.UK template Marko layout.",
+  "version": "0.1.0",
+  "keywords": [
+    "marko-layout",
+    "marko",
+    "gov.uk",
+    "dwp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gunjam/govuk-template-marko.git"
+  },
+  "author": "Niall Molloy <niallmolloy.digitaldwp@gmail.com>",
+  "maintainers": [
+    "Niall Molloy <niallmolloy.digitaldwp@gmail.com>"
+  ],
+  "dependencies": {
+    "lasso": "^2.5.3",
+    "marko": "^3.5.0",
+    "marko-layout": "^2.0.2",
+    "govuk_template_mustache": "0.17.3"
+  },
+  "license": "Apache-2.0"
+}
