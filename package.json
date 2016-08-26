@@ -1,7 +1,7 @@
 {
   "name": "govuk-template-marko",
   "description": "GOV.UK template Marko layout.",
-  "version": "0.1.0",
+  "version": "0.18.1",
   "keywords": [
     "marko-layout",
     "marko",
@@ -17,10 +17,9 @@
     "Niall Molloy <niallmolloy.digitaldwp@gmail.com>"
   ],
   "dependencies": {
-    "lasso": "^2.5.3",
-    "marko": "^3.5.0",
-    "marko-layout": "^2.0.2",
-    "govuk_template_mustache": "0.17.3"
+    "lasso": "^2.5.8",
+    "marko": "^3.10.0",
+    "marko-layout": "^2.0.2"
   },
   "license": "Apache-2.0"
 }
