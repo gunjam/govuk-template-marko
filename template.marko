@@ -1,4 +1,4 @@
-<lasso-page package-path="${data.packagePath}" dependencies=["./static/javascripts/govuk-template.js"]/>
+<lasso-page package-path="${data.packagePath}" dependencies=["./static/javascripts/govuk-template.js"] name="${data.name}"/>
 <!DOCTYPE html>
 $!{"<!--[if lt IE 9]>"}$!{'<html class="lte-ie8" lang="'}${data.htmlLang}$!{'">'}$!{"<![endif]-->"}
 $!{"<!--[if gt IE 8]><!-->"}<html lang="${data.htmlLang}">$!{"<!--<![endif]-->"}
@@ -6,25 +6,25 @@ $!{"<!--[if gt IE 8]><!-->"}<html lang="${data.htmlLang}">$!{"<!--<![endif]-->"}
     <meta charset="utf-8" />
     <title><layout-placeholder name="page-title"/></title>
 
-    $!{"<!--[if gt IE 8]><!-->"}<lasso-resource path="./static/stylesheets/govuk-template.css" var="r432"/><link href="${r432.url}" media="screen" rel="stylesheet"/>$!{"<!--<![endif]-->"}
-    $!{"<!--[if IE 6]>"}<lasso-resource path="./static/stylesheets/govuk-template-ie6.css" var="r572"/><link href="${r572.url}" media="screen" rel="stylesheet"/>$!{"<![endif]-->"}
-    $!{"<!--[if IE 7]>"}<lasso-resource path="./static/stylesheets/govuk-template-ie7.css" var="r712"/><link href="${r712.url}" media="screen" rel="stylesheet"/>$!{"<![endif]-->"}
-    $!{"<!--[if IE 8]>"}<lasso-resource path="./static/stylesheets/govuk-template-ie8.css" var="r852"/><link href="${r852.url}" media="screen" rel="stylesheet"/>$!{"<![endif]-->"}
-    <lasso-resource path="./static/stylesheets/govuk-template-print.css" var="r972"/><link href="${r972.url}" media="print" rel="stylesheet"/>
+    $!{"<!--[if gt IE 8]><!-->"}<lasso-resource path="./static/stylesheets/govuk-template.css" var="r452"/><link href="${r452.url}" media="screen" rel="stylesheet"/>$!{"<!--<![endif]-->"}
+    $!{"<!--[if IE 6]>"}<lasso-resource path="./static/stylesheets/govuk-template-ie6.css" var="r592"/><link href="${r592.url}" media="screen" rel="stylesheet"/>$!{"<![endif]-->"}
+    $!{"<!--[if IE 7]>"}<lasso-resource path="./static/stylesheets/govuk-template-ie7.css" var="r732"/><link href="${r732.url}" media="screen" rel="stylesheet"/>$!{"<![endif]-->"}
+    $!{"<!--[if IE 8]>"}<lasso-resource path="./static/stylesheets/govuk-template-ie8.css" var="r872"/><link href="${r872.url}" media="screen" rel="stylesheet"/>$!{"<![endif]-->"}
+    <lasso-resource path="./static/stylesheets/govuk-template-print.css" var="r992"/><link href="${r992.url}" media="print" rel="stylesheet"/>
 
-    $!{"<!--[if IE 8]>"}<lasso-resource path="./static/stylesheets/fonts-ie8.css" var="r1096"/><link href="${r1096.url}" media="all" rel="stylesheet"/>$!{"<![endif]-->"}
-    $!{"<!--[if gte IE 9]><!-->"}<lasso-resource path="./static/stylesheets/fonts.css" var="r1233"/><link href="${r1233.url}" media="all" rel="stylesheet"/>$!{"<!--<![endif]-->"}
-    $!{"<!--[if lt IE 9]>"}<lasso-resource path="./static/javascripts/ie.js" var="r1648"/><script src="${r1648.url}"></script>$!{"<![endif]-->"}
+    $!{"<!--[if IE 8]>"}<lasso-resource path="./static/stylesheets/fonts-ie8.css" var="r1116"/><link href="${r1116.url}" media="all" rel="stylesheet"/>$!{"<![endif]-->"}
+    $!{"<!--[if gte IE 9]><!-->"}<lasso-resource path="./static/stylesheets/fonts.css" var="r1253"/><link href="${r1253.url}" media="all" rel="stylesheet"/>$!{"<!--<![endif]-->"}
+    $!{"<!--[if lt IE 9]>"}<lasso-resource path="./static/javascripts/ie.js" var="r1668"/><script src="${r1668.url}"></script>$!{"<![endif]-->"}
 
-    <lasso-resource path="./static/images/favicon.ico" var="r1444"/><link rel="shortcut icon" href="${r1444.url}" type="image/x-icon"/>
-    <lasso-resource path="./static/images/gov.uk_logotype_crown.svg" var="r1538"/><link rel="mask-icon" href="${r1538.url}" color="#0b0c0c"/>
-    <lasso-resource path="./static/images/apple-touch-icon-152x152.png" var="r1636"/><link rel="apple-touch-icon-precomposed" sizes="152x152" href="${r1636.url}"/>
-    <lasso-resource path="./static/images/apple-touch-icon-120x120.png" var="r1756"/><link rel="apple-touch-icon-precomposed" sizes="120x120" href="${r1756.url}"/>
-    <lasso-resource path="./static/images/apple-touch-icon-76x76.png" var="r1876"/><link rel="apple-touch-icon-precomposed" sizes="76x76" href="${r1876.url}"/>
-    <lasso-resource path="./static/images/apple-touch-icon-60x60.png" var="r1992"/><link rel="apple-touch-icon-precomposed" href="${r1992.url}"/>
+    <lasso-resource path="./static/images/favicon.ico" var="r1464"/><link rel="shortcut icon" href="${r1464.url}" type="image/x-icon"/>
+    <lasso-resource path="./static/images/gov.uk_logotype_crown.svg" var="r1558"/><link rel="mask-icon" href="${r1558.url}" color="#0b0c0c"/>
+    <lasso-resource path="./static/images/apple-touch-icon-152x152.png" var="r1656"/><link rel="apple-touch-icon-precomposed" sizes="152x152" href="${r1656.url}"/>
+    <lasso-resource path="./static/images/apple-touch-icon-120x120.png" var="r1776"/><link rel="apple-touch-icon-precomposed" sizes="120x120" href="${r1776.url}"/>
+    <lasso-resource path="./static/images/apple-touch-icon-76x76.png" var="r1896"/><link rel="apple-touch-icon-precomposed" sizes="76x76" href="${r1896.url}"/>
+    <lasso-resource path="./static/images/apple-touch-icon-60x60.png" var="r2012"/><link rel="apple-touch-icon-precomposed" href="${r2012.url}"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <lasso-resource path="./static/images/opengraph-image.png" var="r2168"/><meta property="og:image" content="${r2168.url}"/>
+    <lasso-resource path="./static/images/opengraph-image.png" var="r2188"/><meta property="og:image" content="${r2188.url}"/>
 
     <layout-placeholder name="head"><lasso-head/></layout-placeholder>
   </head>
@@ -52,7 +52,7 @@ $!{"<!--[if gt IE 8]><!-->"}<html lang="${data.htmlLang}">$!{"<!--<![endif]-->"}
         <div class="header-global">
           <div class="header-logo">
             <a href="${data.homepageUrl}" title="${data.logoLinkTitle}" id="logo" class="content">
-              <lasso-resource path="./static/images/gov.uk_logotype_crown_invert_trans.png" var="r3087"/><img src="${r3087.url}" width="35" height="31" alt=""/> <layout-placeholder name="global-header-text">GOV.UK</layout-placeholder>
+              <lasso-resource path="./static/images/gov.uk_logotype_crown_invert_trans.png" var="r3107"/><img src="${r3107.url}" width="35" height="31" alt=""/> <layout-placeholder name="global-header-text">GOV.UK</layout-placeholder>
             </a>
           </div>
           <layout-placeholder name="inside-header"/>
@@ -97,5 +97,8 @@ $!{"<!--[if gt IE 8]><!-->"}<html lang="${data.htmlLang}">$!{"<!--<![endif]-->"}
     
 
     <layout-placeholder name="body-end"><lasso-body/></layout-placeholder>
+
+    
+    <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
   </body>
 </html>
