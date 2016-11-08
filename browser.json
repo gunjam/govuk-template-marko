@@ -1,0 +1,5 @@
+{
+  "dependencies": [
+    "./static/javascripts/govuk-template.js"
+  ]
+}
