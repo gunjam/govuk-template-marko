@@ -17,8 +17,8 @@
     "Niall Molloy <niallmolloy.digitaldwp@gmail.com>"
   ],
   "dependencies": {
-    "lasso": "^2.8.0",
-    "marko": "^3.12.0",
+    "lasso": "^2.11.8",
+    "marko": "^4.2.3",
     "marko-layout": "^2.0.2"
   },
   "license": "Apache-2.0"
