@@ -43,10 +43,14 @@
     <header role="banner" id="global-header" class="${input.headerClass}">
       <div class="header-wrapper">
         <div class="header-global">
+          <lasso-resource path="./static/images/gov.uk_logotype_crown_invert_trans.png" var="r3031"/>
           <div class="header-logo">
-            <a href="${input.homepageUrl}" title="${input.logoLinkTitle}" id="logo" class="content">
-              <lasso-resource path="./static/images/gov.uk_logotype_crown_invert_trans.png" var="r3031"/><img src="${r3031.url}" width="36" height="32" alt=""/> <if(input.globalHeaderText)><include(input.globalHeaderText)/></if><else>GOV.UK</else>
+            <a if(input.homepageUrl) href="${input.homepageUrl}" title="${input.logoLinkTitle}" id="logo" class="content">
+              <img src="${r3031.url}" width="36" height="32" alt=""/> <if(input.globalHeaderText)><include(input.globalHeaderText)/></if><else>GOV.UK</else>
             </a>
+            <span else id="logo" class="content">
+              <img src="${r3031.url}" width="36" height="32" alt=""/> <if(input.globalHeaderText)><include(input.globalHeaderText)/></if><else>GOV.UK</else>
+            </span>
           </div>
           <include(input.insideHeader)/>
         </div>
