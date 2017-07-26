@@ -1,0 +1,5 @@
+{
+  "dependencies": [
+    "../static/stylesheets/govuk-template-internal.css"
+  ]
+}

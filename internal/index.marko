@@ -1,0 +1,99 @@
+<lasso-page package-path="${input.packagePath}" name="${input.name}"/>
+<!DOCTYPE html>
+<html lang="${input.htmlLang || 'en'}">
+  <head>
+    <meta charset="utf-8" />
+    <title>${input.pageTitle}</title>
+    <include(input.googleAnalytics)/>
+
+    <lasso-resource path="../static/stylesheets/govuk-template-print.css" var="printCSS"/>
+    <lasso-resource path="../static/stylesheets/fonts.css" var="fontCSS"/>
+    <link href="${fontCSS.url}" rel="stylesheet" media="all"/>
+    <link href="${printCSS.url}" media="print" rel="stylesheet"/>
+
+    <lasso-resource path="../static/images/favicon.ico" var="r1299"/><link rel="shortcut icon" href="${r1299.url}" type="image/x-icon"/>
+    
+    <lasso-resource path="../static/images/gov.uk_logotype_crown.svg" var="r1398"/><link rel="mask-icon" href="${r1398.url}" color="#0b0c0c"/>
+    <lasso-resource path="../static/images/apple-touch-icon-180x180.png" var="r1496"/><link rel="apple-touch-icon" sizes="180x180" href="${r1496.url}"/>
+    <lasso-resource path="../static/images/apple-touch-icon-167x167.png" var="r1604"/><link rel="apple-touch-icon" sizes="167x167" href="${r1604.url}"/>
+    <lasso-resource path="../static/images/apple-touch-icon-152x152.png" var="r1712"/><link rel="apple-touch-icon" sizes="152x152" href="${r1712.url}"/>
+    <lasso-resource path="../static/images/apple-touch-icon.png" var="r1820"/><link rel="apple-touch-icon" href="${r1820.url}"/>
+
+    
+    <meta name="theme-color" content="#0b0c0c" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <lasso-resource path="../static/images/opengraph-image.png" var="r2034"/><meta property="og:image" content="${r2034.url}"/>
+
+    <lasso-head/><include(input.head)/>
+  </head>
+
+  <body class="${input.bodyClasses}">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    
+
+    <div id="skiplink-container">
+      <div>
+        <a href="#content" class="skiplink"><include(input.skipLinkMessage)/></a>
+      </div>
+    </div>
+
+    
+
+    
+    <header role="banner" id="global-header" class="${input.headerClass}">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <span id="logo" class="content">
+              <include(input.globalHeaderText)/>
+            </span>
+          </div>
+          <include(input.insideHeader)/>
+        </div>
+        <include(input.propositionHeader)/>
+      </div>
+    </header>
+    
+
+    <include(input.afterHeader)/>
+
+    <div id="global-header-bar"></div>
+
+    <include(input.content)/>
+
+    <footer class="group js-footer" id="footer" role="contentinfo">
+
+      <div class="footer-wrapper">
+        <include(input.footerTop)/>
+
+        <div class="footer-meta">
+          <div class="footer-meta-inner">
+            <include(input.footerSupportLinks)/>
+
+            <div class="open-government-licence">
+              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+              
+                <include(input.licenceMessage)/>
+              
+            </div>
+          </div>
+
+          <div class="copyright">
+            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/"><include(input.crownCopyrightMessage)/></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+
+    
+
+    <lasso-body/><include(input.bodyEnd)/>
+
+    
+    <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+  </body>
+</html>
