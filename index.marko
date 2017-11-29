@@ -5,10 +5,18 @@
     <title>${input.pageTitle}</title>
     <include(input.googleAnalytics)/>
 
-    $!{'<!--[if gt IE 8]><!-->'}<lasso-resource path="./static/stylesheets/govuk-template.css" var="r365"/><link href="${r365.url}" media="screen" rel="stylesheet"/>$!{'<!--<![endif]-->'}
-    $!{'<!--[if IE 6]>'}<lasso-resource path="./static/stylesheets/govuk-template-ie6.css" var="r493"/><link href="${r493.url}" media="screen" rel="stylesheet"/>$!{'<![endif]-->'}    $!{'<!--[if IE 7]>'}<lasso-resource path="./static/stylesheets/govuk-template-ie7.css" var="r621"/><link href="${r621.url}" media="screen" rel="stylesheet"/>$!{'<![endif]-->'}    $!{'<!--[if IE 8]>'}<lasso-resource path="./static/stylesheets/govuk-template-ie8.css" var="r749"/><link href="${r749.url}" media="screen" rel="stylesheet"/>$!{'<![endif]-->'}    <lasso-resource path="./static/stylesheets/govuk-template-print.css" var="r863"/><link href="${r863.url}" media="print" rel="stylesheet"/>
+    $!{'<!--[if gt IE 8]><!-->'}<lasso-slot name="gtIE8" external-style-attrs={'media': 'screen'}/>$!{'<!--<![endif]-->'}
+    $!{'<!--[if IE 6]>'}<lasso-slot name="IE6" external-style-attrs={'media': 'screen'}/>$!{'<![endif]-->'}
+    $!{'<!--[if IE 7]>'}<lasso-slot name="IE7" external-style-attrs={'media': 'screen'}/>$!{'<![endif]-->'}
+    $!{'<!--[if IE 8]>'}
+      <lasso-slot name="IE8" external-style-attrs={'media': 'screen'}/>
+      <lasso-resource path="./static/stylesheets/fonts-ie8.css" var="i18fonts"/>
+      <link href="${i18fonts.url}" media="all" rel="stylesheet"/>
+    $!{'<![endif]-->'}
 
-    $!{'<!--[if IE 8]>'}<lasso-resource path="./static/stylesheets/fonts-ie8.css" var="r981"/><link href="${r981.url}" media="all" rel="stylesheet"/>$!{'<![endif]-->'}    $!{'<!--[if gte IE 9]><!-->'}<lasso-resource path="./static/stylesheets/fonts.css" var="r1106"/><link href="${r1106.url}" media="all" rel="stylesheet"/>$!{'<!--<![endif]-->'}
+    <lasso-slot name="print" external-style-attrs={'media': 'print'}/>
+
+    $!{'<!--[if gte IE 9]><!-->'}<lasso-resource path="./static/stylesheets/fonts.css" var="r1106"/><link href="${r1106.url}" media="all" rel="stylesheet"/>$!{'<!--<![endif]-->'}
     $!{'<!--[if lt IE 9]>'}<lasso-resource path="./static/javascripts/ie.js" var="r1641"/><script src="${r1641.url}"></script>$!{'<![endif]-->'}
     <lasso-resource path="./static/images/favicon.ico" var="r1299"/><link rel="shortcut icon" href="${r1299.url}" type="image/x-icon"/>
 
@@ -24,7 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <lasso-resource path="./static/images/opengraph-image.png" var="r2034"/><meta property="og:image" content="${r2034.url}"/>
 
-    <lasso-head/><include(input.head)/>
+    <lasso-head external-style-attrs={'media': 'screen'}/><include(input.head)/>
   </head>
 
   <body class="${input.bodyClasses}">

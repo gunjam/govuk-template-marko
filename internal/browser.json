@@ -1,5 +1,7 @@
 {
   "dependencies": [
+    {"path": "../static/stylesheets/govuk-template-print.css", "slot": "print"},
+    {"path": "../static/stylesheets/fonts.css", "slot": "font", "if-not-flag": "no-font"},
     "../static/stylesheets/govuk-template-internal.css"
   ]
 }

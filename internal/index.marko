@@ -1,4 +1,4 @@
-<lasso-page package-path="${input.packagePath}" name="${input.name}"/>
+<lasso-page package-path="${input.packagePath}" name="${input.name}" flags=input.flags/>
 <!DOCTYPE html>
 <html lang="${input.htmlLang || 'en'}">
   <head>
@@ -6,10 +6,8 @@
     <title>${input.pageTitle}</title>
     <include(input.googleAnalytics)/>
 
-    <lasso-resource path="../static/stylesheets/govuk-template-print.css" var="printCSS"/>
-    <lasso-resource path="../static/stylesheets/fonts.css" var="fontCSS"/>
-    <link href="${fontCSS.url}" rel="stylesheet" media="all"/>
-    <link href="${printCSS.url}" media="print" rel="stylesheet"/>
+    <lasso-slot name="font" external-style-attrs={'media': 'all'}/>
+    <lasso-slot name="print" external-style-attrs={'media': 'print'}/>
 
     <lasso-resource path="../static/images/favicon.ico" var="r1299"/><link rel="shortcut icon" href="${r1299.url}" type="image/x-icon"/>
 
@@ -25,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <lasso-resource path="../static/images/opengraph-image.png" var="r2034"/><meta property="og:image" content="${r2034.url}"/>
 
-    <lasso-head/><include(input.head)/>
+    <lasso-head external-style-attrs={'media': 'screen'}/><include(input.head)/>
   </head>
 
   <body class="${input.bodyClasses}">
