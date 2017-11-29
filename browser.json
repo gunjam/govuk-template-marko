@@ -1,10 +1,11 @@
 {
   "dependencies": [
+    {"path": "./static/stylesheets/govuk-template-print.css", "slot": "print"},
     {"path": "./static/stylesheets/govuk-template-ie6.css", "slot": "IE6"},
     {"path": "./static/stylesheets/govuk-template-ie7.css", "slot": "IE7"},
     {"path": "./static/stylesheets/govuk-template-ie8.css", "slot": "IE8"},
     {"path": "./static/stylesheets/govuk-template.css", "slot": "gtIE8"},
-    {"path": "./static/stylesheets/govuk-template-print.css", "slot": "print"},
+    {"path": "./static/javascripts/ie.js", "slot": "ltIE9"},
     "./static/javascripts/govuk-template.js"
   ]
 }
