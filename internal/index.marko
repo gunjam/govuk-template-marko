@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <title>${input.pageTitle}</title>
-    <include(input.googleAnalytics)/>
+    <include(input.headStart)/>
 
     <lasso-slot name="font" external-style-attrs={'media': 'all'}/>
     <lasso-slot name="print" external-style-attrs={'media': 'print'}/>
@@ -23,10 +23,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <lasso-resource path="../static/images/opengraph-image.png" var="r2034"/><meta property="og:image" content="${r2034.url}"/>
 
-    <lasso-head external-style-attrs={'media': 'screen'}/><include(input.head)/>
+    <lasso-head external-style-attrs={'media': 'screen'}/>
+    <include(input.headEnd)/>
   </head>
 
   <body class="${input.bodyClasses}">
+    <include(input.bodyStart)/>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
 
