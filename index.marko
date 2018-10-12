@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>${input.pageTitle}</title>
-    <include(input.googleAnalytics)/>
+    <include(input.headStart)/>
 
     $!{'<!--[if gt IE 8]><!-->'}
       <lasso-slot name="gtIE8" external-style-attrs={'media': 'screen'}/>
@@ -50,10 +50,11 @@
     <meta property="og:image" content="${r2034.url}"/>
 
     <lasso-head external-style-attrs={'media': 'screen'}/>
-    <include(input.head)/>
+    <include(input.headEnd)/>
   </head>
 
   <body class="${input.bodyClasses}">
+    <include(input.bodyStart)/>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
 
