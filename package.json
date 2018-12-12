@@ -17,7 +17,7 @@
     "Niall Molloy <niallmolloy.digitaldwp@gmail.com>"
   ],
   "dependencies": {
-    "@lasso/marko-taglib": "^1.0.12"
+    "@lasso/marko-taglib": "^1.0.13"
   },
   "peerDependencies": {
     "lasso": "^3.1.2",

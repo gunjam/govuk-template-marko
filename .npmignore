@@ -1,0 +1,5 @@
+# Compiled Marko templates
+*.marko.js
+
+# Ignore the other ignore?
+.gitignore
