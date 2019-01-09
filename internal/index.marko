@@ -1,22 +1,26 @@
-<lasso-page package-path="${input.packagePath}" name="${input.name}" flags=input.flags/>
+<lasso-page package-path=input.packagePath name=input.name flags=input.flags/>
 <!DOCTYPE html>
 <html lang="${input.htmlLang || 'en'}">
   <head>
     <meta charset="utf-8" />
     <title>${input.pageTitle}</title>
-    <include(input.headStart)/>
+    <${input.headStart}/>
 
     <lasso-slot name="font" external-style-attrs={'media': 'all'}/>
     <lasso-slot name="print" external-style-attrs={'media': 'print'}/>
 
-    <lasso-resource path="../static/images/favicon.ico" var="r1299"/><link rel="shortcut icon" href="${r1299.url}" type="image/x-icon"/>
-
-    <lasso-resource path="../static/images/gov.uk_logotype_crown.svg" var="r1398"/><link rel="mask-icon" href="${r1398.url}" color="#0b0c0c"/>
-    <lasso-resource path="../static/images/apple-touch-icon-180x180.png" var="r1496"/><link rel="apple-touch-icon" sizes="180x180" href="${r1496.url}"/>
-    <lasso-resource path="../static/images/apple-touch-icon-167x167.png" var="r1604"/><link rel="apple-touch-icon" sizes="167x167" href="${r1604.url}"/>
-    <lasso-resource path="../static/images/apple-touch-icon-152x152.png" var="r1712"/><link rel="apple-touch-icon" sizes="152x152" href="${r1712.url}"/>
-    <lasso-resource path="../static/images/apple-touch-icon.png" var="r1820"/><link rel="apple-touch-icon" href="${r1820.url}"/>
-
+    <lasso-resource path="./static/images/favicon.ico" var="favicon"/>
+    <link rel="shortcut icon" href=favicon.url type="image/x-icon"/>
+    <lasso-resource path="./static/images/gov.uk_logotype_crown.svg" var="crown"/>
+    <link rel="mask-icon" href=crown.url color="#0b0c0c"/>
+    <lasso-resource path="./static/images/apple-touch-icon-180x180.png" var="appleIcon180"/>
+    <link rel="apple-touch-icon" sizes="180x180" href=appleIcon180.url/>
+    <lasso-resource path="./static/images/apple-touch-icon-167x167.png" var="appleIcon167"/>
+    <link rel="apple-touch-icon" sizes="167x167" href=appleIcon167.url/>
+    <lasso-resource path="./static/images/apple-touch-icon-152x152.png" var="appleIcon152"/>
+    <link rel="apple-touch-icon" sizes="152x152" href=appleIcon152.url/>
+    <lasso-resource path="./static/images/apple-touch-icon.png" var="appleIcon"/>
+    <link rel="apple-touch-icon" href=appleIcon.url/>
 
     <meta name="theme-color" content="#0b0c0c" />
 
@@ -24,18 +28,18 @@
     <lasso-resource path="../static/images/opengraph-image.png" var="r2034"/><meta property="og:image" content="${r2034.url}"/>
 
     <lasso-head external-style-attrs={'media': 'screen'}/>
-    <include(input.headEnd)/>
+    <${input.headEnd}/>
   </head>
 
   <body class="${input.bodyClasses}">
-    <include(input.bodyStart)/>
+    <${input.bodyStart}/>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
 
 
     <div id="skiplink-container">
       <div>
-        <a href="#content" class="skiplink"><include(input.skipLinkMessage)/></a>
+        <a href="#content" class="skiplink"><${input.skipLinkMessage}/></a>
       </div>
     </div>
 
@@ -45,38 +49,38 @@
     <header role="banner" id="global-header" class="${input.headerClass}">
       <div class="header-wrapper">
         <div class="header-global">
-          <include(input.insideHeader)/>
+          <${input.insideHeader}/>
         </div>
-        <include(input.propositionHeader)/>
+        <${input.propositionHeader}/>
       </div>
     </header>
 
 
-    <include(input.afterHeader)/>
+    <${input.afterHeader}/>
 
     <div id="global-header-bar"></div>
 
-    <include(input.content)/>
+    <${input.content}/>
 
     <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
-        <include(input.footerTop)/>
+        <${input.footerTop}/>
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
-            <include(input.footerSupportLinks)/>
+            <${input.footerSupportLinks}/>
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
 
-                <include(input.licenceMessage)/>
+                <${input.licenceMessage}/>
 
             </div>
           </div>
 
           <div class="copyright">
-            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/"><include(input.crownCopyrightMessage)/></a>
+            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/"><${input.crownCopyrightMessage}/></a>
           </div>
         </div>
       </div>
@@ -86,7 +90,7 @@
 
 
 
-    <lasso-body/><include(input.bodyEnd)/>
+    <lasso-body/><${input.bodyEnd}/>
 
 
   </body>

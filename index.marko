@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>${input.pageTitle}</title>
-    <include(input.headStart)/>
+    <${input.headStart}/>
 
     $!{'<!--[if gt IE 8]><!-->'}<lasso-slot name="gtIE8" external-style-attrs={'media': 'screen'}/>$!{'<!--<![endif]-->'}
     $!{'<!--[if IE 6]>'}<lasso-slot name="IE6" external-style-attrs={'media': 'screen'}/>$!{'<![endif]-->'}
@@ -35,23 +35,23 @@
     <meta property="og:image" content=opengraphImage.url/>
 
     <lasso-head external-style-attrs={'media': 'screen'}/>
-    <include(input.headEnd)/>
+    <${input.headEnd}/>
   </head>
 
   <body class=input.bodyClasses>
-    <include(input.bodyStart)/>
+    <${input.bodyStart}/>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
 
     <div id="skiplink-container">
       <div>
-        <a href="#content" class="skiplink"><include(input.skipLinkMessage)/></a>
+        <a href="#content" class="skiplink"><${input.skipLinkMessage}/></a>
       </div>
     </div>
 
     <div id="global-cookie-message">
 
-      <include(input.cookieMessage)/>
+      <${input.cookieMessage}/>
 
     </div>
 
@@ -62,47 +62,47 @@
           <div class="header-logo">
             <if(input.homepageUrl)>
               <a href=input.homepageUrl title=input.logoLinkTitle id="logo" class="content">
-                <img src=headerCrown.url width="36" height="32" alt=""/> <if(input.globalHeaderText)><include(input.globalHeaderText)/></if><else>GOV.UK</else>
+                <img src=headerCrown.url width="36" height="32" alt=""/> <if(input.globalHeaderText)><${input.globalHeaderText}/></if><else>GOV.UK</else>
               </a>
             </if>
             <else>
               <span id="logo" class="content">
-                <img src=headerCrown.url width="36" height="32" alt=""/> <if(input.globalHeaderText)><include(input.globalHeaderText)/></if><else>GOV.UK</else>
+                <img src=headerCrown.url width="36" height="32" alt=""/> <if(input.globalHeaderText)><${input.globalHeaderText}/></if><else>GOV.UK</else>
               </span>
             </else>
           </div>
-          <include(input.insideHeader)/>
+          <${input.insideHeader}/>
         </div>
-        <include(input.propositionHeader)/>
+        <${input.propositionHeader}/>
       </div>
     </header>
 
 
-    <include(input.afterHeader)/>
+    <${input.afterHeader}/>
 
     <div id="global-header-bar"></div>
 
-    <include(input.content)/>
+    <${input.content}/>
 
     <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
-        <include(input.footerTop)/>
+        <${input.footerTop}/>
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
-            <include(input.footerSupportLinks)/>
+            <${input.footerSupportLinks}/>
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
 
-                <include(input.licenceMessage)/>
+                <${input.licenceMessage}/>
 
             </div>
           </div>
 
           <div class="copyright">
-            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/"><include(input.crownCopyrightMessage)/></a>
+            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/"><${input.crownCopyrightMessage}/></a>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
     <div id="global-app-error" class="app-error hidden"></div>
 
     <lasso-body/>
-    <include(input.bodyEnd)/>
+    <${input.bodyEnd}/>
 
     <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
   </body>
